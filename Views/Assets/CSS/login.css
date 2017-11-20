@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #FAFAFA;
+}
+
+#formLogin {
+  background-color:#FFFFFF;
+  width: 30%;
+  margin: auto;
+  margin-top: 250px;
+  border-radius: 15px;
+  padding-bottom: 30px;
+  box-shadow: 0px 10px 30px rgba(200,230,247,0.25);
+}
+
+#formLogin h2{
+  font-family: 'Lobster', cursive;
+  color: #D42C2C;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#formLogin input[type="text"]{
+  margin-top: 30px;
+  border: none;
+  background-color: #F2F2F2;
+  padding: 10px;
+}
+
+#formLogin input{
+  margin-top: 30px;
+  border: none;
+}
+
+#userLogin {
+
+}
+
+#formLogin form{
+  display: grid;
+  width: 80%;
+  margin:auto;
+}
+
+#passwordLogin {
+
+}
+
+#buttonLogin {
+color: white;
+background-color: #D42C2C;
+text-decoration: none;
+border: none;
+font-family: 'Lobster', cursive;
+padding: 10px;
+}
+
+#buttonLogin:hover{
+  background-color: #FF6969;
+}
