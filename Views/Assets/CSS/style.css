@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #FAFAFA;
+}
+
+.degrade {
+  background: linear-gradient(139.56deg, #D42C2C  9.22%, #F2994A  113.7%);
+
+}
+
+.Login {
+  box-shadow: 0px 20px 60px rgba(235, 87, 87, 0.5);
+  border-radius: 15px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 15px;
+  padding-bottom: 30px;
+  font-size: 200%;
+}
+
+@media screen and (max-width:650px) {
+  .Login {
+      width: 90%;
+  }
+}
+
+@media screen and (min-width:651px) and (max-width:1180px) {
+  .Login {
+      width: 60%;
+  }
+}
+
+.Login h2{
+  font-family: 'Lobster', cursive;
+  color: #D42C2C;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  font-size: 180%;
+}
+
+.degrade h2{
+  color: white;
+}
+
+.Login input[type="text"]{
+  border: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  width: 100%;
+  background: #F2F2F2;
+  border: ;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #FF6969;
+}
+
+.degrade input[type="text"]{
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+textarea {
+  font-size: 75%;
+  border: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  width: 100%;
+  background: #F2F2F2;
+  margin-top: 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #FF6969;
+  height: 150px;
+  resize: none;
+}
+
+.Login .form_ctn{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Login input{
+  border: none;
+  font-size: 100%;
+  border-radius: 5px;
+  margin: 30px auto 0;
+}
+
+.Login input[type="file"]{
+  text-align: center;
+  width: 100%;
+  font-size: 50%;
+}
+
+#buttonLogin {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #DB4949;
+  text-decoration: none;
+  border: none;
+  font-family: 'Lobster', cursive;
+  padding: 10px;
+  width: 170px;
+  margin-top: 70px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#buttonLogin:hover{
+  transition: 0.3s;
+  background-color: #FF6969;
+  color: white;
+}
+
+#buttonForm{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+  border: none;
+  font-family: 'Lobster', cursive;
+  padding: 10px;
+  width: 170px;
+  margin-top: 70px;
+  background: #D42C2C ;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#buttonForm:hover{
+  background-color: white;
+  color: #D42C2C;
+  border-left: 3px dotted #D42C2C;
+  border-right: 3px dotted #D42C2C;
+}
