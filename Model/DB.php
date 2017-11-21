@@ -4,10 +4,8 @@
  */
 class Db
 {
-
-  function __construct()
-  {
-    return new PDO('mysql:host=localhost;dbname=chatbox', 'root', 'user');
+  public function getPDO(){
+    return new PDO('mysql:host=localhost;dbname=pinterest', 'root', 'user');
   }
 }
 
