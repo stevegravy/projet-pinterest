@@ -12,10 +12,11 @@
 <body>
       <form class="Login" action="index.html" method="post">
         <div class="form_ctn">
-          <h2>Login</h2>
+          <h2>Sign up</h2>
           <input id="userLogin" type="text" name="user" value="user">
           <input id="passwordLogin" type="text" name="password" value="password">
-          <input id="buttonLogin" type="submit" name="Login" value="Login">
+          <input id="confirmation" type="text" name="confirmation" value="confirmation password">
+          <input id="buttonLogin" type="submit" name="Sign up" value="Sign up">
         </div>
       </form>
 </body>
