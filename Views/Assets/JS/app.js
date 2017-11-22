@@ -11,9 +11,7 @@ butLogin.addEventListener("click", function(){
 });
 
 acc_cont.addEventListener("click",function(event){
-  if (Login.contains(event.target)){
-
-  } else {
+  if (!Login.contains(event.target)){
     Login.classList.remove("actionOnclick");
     Login.classList.add("action");
   }

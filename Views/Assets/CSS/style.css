@@ -32,10 +32,15 @@ body{
   }
 }
 
+@media screen and (max-width: 800px) {
+  
+}
+
 @media screen and (min-width:651px) and (max-width:1180px) {
   .Login {
       width: 60%;
   }
+
 }
 
 .Login h2{
@@ -149,7 +154,7 @@ textarea {
 }
 
 #navbar {
-  height: 90px;
+  height: 100px;
   background: #D42C2C;
   position: relative;
 }
@@ -158,7 +163,7 @@ textarea {
   height: 90px;
   position: absolute;
   margin: 0 auto;
-  right: 50%;
+  right: calc( 50% - 54px );
   top: 50%;
   transform: translateX(-50%);
   transform: translateY(-50%);
@@ -213,10 +218,13 @@ textarea {
 .action{
   position: absolute;
   opacity: 0;
-  display: none;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.3Ss linear;
 }
 
 .actionOnclick{
   position: absolute;
   opacity: 1;
+  transition: visibility 0s, opacity 0.3s linear;
+  visibility: visible;
 }
