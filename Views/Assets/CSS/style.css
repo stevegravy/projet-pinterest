@@ -1,9 +1,12 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding:0;
 }
 
 body{
   background-color: #FAFAFA;
+  font-family: Roboto, serif;
 }
 
 .degrade {
@@ -50,11 +53,9 @@ body{
 .Login input[type="text"]{
   border: none;
   padding: 10px;
-  font-family: 'Roboto';
   font-weight: bold;
   width: 100%;
   background: #F2F2F2;
-  border: ;
   box-sizing: border-box;
   border-radius: 5px;
   color: #FF6969;
@@ -145,3 +146,40 @@ textarea {
   border-left: 3px dotted #D42C2C;
   border-right: 3px dotted #D42C2C;
 }
+
+#navbar {
+  height: 60px;
+  background: #D42C2C;
+  position: relative;
+}
+
+#logo {
+  height: 50px;
+  position: absolute;
+  margin: 0 auto;
+  right: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  color: white;
+  top: 50%;
+  right: 50px;
+  font-size: 20px;
+  position: absolute;
+  transform: translateY(-50%);
+  list-style-type: none;
+}
+
+#add{
+  position: absolute;
+  right: 200px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
