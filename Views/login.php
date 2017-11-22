@@ -10,7 +10,7 @@
   <title>Login</title>
 </head>
 <body>
-      <form class="Login degrade" action="index.html" method="post">
+      <form class="Login degrade" action="../Model/User.php" method="post">
         <div class="form_ctn">
           <h2>Login</h2>
           <input id="userLogin" type="text" name="user" value="user">
