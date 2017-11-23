@@ -11,11 +11,20 @@
 <nav id="navbar">
     <a href=""><img id="logo" src="Assets/img/logo.svg" alt=""></a>
     <div id="right_content">
-        <a href="" id="add"><img src="Assets/img/add.png" alt=""></a>
+
         <ul id="menu">
-            <a id='login' href="#"><li class="link">User</li></a>
-            <a href="#"><li class="link">Logout</li></a>
+          <a href="#" id="add"><li class="link"><img src="Assets/img/add.png" alt=""></li></a>
+          <a id='login' href="#"><li class="link">User</li></a>
+          <a href="#"><li class="link">Logout</li></a>
         </ul>
+      <div id="nav_list">
+        <ul id="burger">
+          <a id="threeLi" href="#"><li><img src="Assets/img/menu.png" alt=""></li></a>
+          <a id='login2' href="#"><li class="link">User</li></a>
+          <a href="#"><li class="link">Logout</li></a>
+          <a href="#"><li class="link">Add</li></a>
+        </ul>
+      </div>
     </div>
 
 </nav>

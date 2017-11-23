@@ -26,6 +26,14 @@ body{
   left:calc(50% - 200px);
 }
 
+@media screen and (max-width:475px){
+  .Login {
+    max-width: 300px;
+    left: calc(50% - 150px);
+    margin-top: 100px;
+  }
+}
+
 @media screen and (max-width:650px) {
   .Login {
       width: 90%;
@@ -33,7 +41,18 @@ body{
 }
 
 @media screen and (max-width: 800px) {
-  
+  #menu{
+    visibility: hidden;
+  }
+
+  #burger img{
+    visibility: visible;
+  }
+
+  #burger .link:hover{
+    background-color: #eee;
+    color: #D42C2C;
+  }
 }
 
 @media screen and (min-width:651px) and (max-width:1180px) {
@@ -194,7 +213,7 @@ textarea {
 
 #add{
   position: absolute;
-  right: 200px;
+  right: 150px;
   transform: translateY(-50%);
   top: 50%;
   margin-right: 20px;
@@ -226,5 +245,48 @@ textarea {
   position: absolute;
   opacity: 1;
   transition: visibility 0s, opacity 0.3s linear;
+  visibility: visible;
+}
+
+#nav_list{
+  visibility: hidden;
+}
+
+#burger{
+  position: absolute;
+  display: block;
+  right: 0%;
+  top:20%;
+}
+
+#burger li{
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 10px 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#burger .link{
+  background-color: #D42C2C;
+}
+
+#burger img{
+  color: white;
+  width: 40px;
+  margin-bottom: 15px;
+  background-color: none;
+}
+
+#threeLi a{
+  background-color: none;
+}
+
+#burger a{
+  text-decoration: none;
+}
+
+.visible{
   visibility: visible;
 }
