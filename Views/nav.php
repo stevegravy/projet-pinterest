@@ -5,6 +5,8 @@
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link href="Assets/CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 <body>
@@ -19,10 +21,10 @@
         </ul>
       <div id="nav_list">
         <ul id="burger">
-          <a id="threeLi" href="#"><li><img src="Assets/img/menu.png" alt=""></li></a>
+          <a id="threeLi" href="#"><li><i class="fa fa-bars fa-2x" aria-hidden="true"></i></li></a>
           <a id='login2' href="#"><li class="link">User</li></a>
           <a href="#"><li class="link">Logout</li></a>
-          <a href="#"><li class="link">Add</li></a>
+          <a href="./form.php"><li class="link">Add</li></a>
         </ul>
       </div>
     </div>

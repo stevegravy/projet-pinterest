@@ -4,11 +4,17 @@ var acc_cont = document.getElementById('acc_cont');
 var butBurger = document.getElementById('threeLi');
 var menu = document.querySelector('#burger');
 var butLogin2 = document.getElementById('login2');
+var croix = document.getElementById('croix');
 
 
 butLogin.addEventListener("click", function(){
   Login.classList.remove("action");
   Login.classList.add("actionOnclick");
+});
+
+croix.addEventListener('click', function(){
+  Login.classList.add('action');
+  Login.classList.remove("actionOnclick");
 });
 
 acc_cont.addEventListener("click",function(event){

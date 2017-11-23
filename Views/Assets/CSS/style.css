@@ -30,7 +30,7 @@ body{
   .Login {
     max-width: 300px;
     left: calc(50% - 150px);
-    margin-top: 100px;
+    margin-top: 20px;
   }
 }
 
@@ -45,7 +45,7 @@ body{
     visibility: hidden;
   }
 
-  #burger img{
+  #burger i{
     visibility: visible;
   }
 
@@ -124,6 +124,15 @@ textarea {
   text-align: center;
   width: 100%;
   font-size: 50%;
+}
+
+#croix{
+  width: 40px;
+  float: left;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  color: white;
 }
 
 #buttonLogin {
@@ -268,14 +277,14 @@ textarea {
   text-align: center;
 }
 
-#burger .link{
+#burger li.link{
   background-color: #D42C2C;
 }
 
-#burger img{
+#burger i{
   color: white;
   width: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   background-color: none;
 }
 
