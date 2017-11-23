@@ -11,16 +11,7 @@
 <?php include('./nav.php') ?>
 <?php include('./login.php')?>
   <div id="acc_cont">
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
-  <div>:D</div>
+    
   </div>
   <script type="text/javascript" src='./Assets/JS/app.js'></script>
 </body>
