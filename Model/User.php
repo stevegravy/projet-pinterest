@@ -4,8 +4,13 @@ include 'DB.php';
   class User{
       public $db;
 
-    public function __construct($pdo){
-      $this->db = $pdo;
+    public function __construct(){
+      try{
+          $this->db = new PDO('mysql:host=localhost;dbname=pinterest', 'root', 'user');
+          $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $e) {
+          die('Erreur :' . $e->getMessage());
+      }
     }
 
 
@@ -15,7 +20,7 @@ include 'DB.php';
       if ($req->rowCount() == 1) {//si le nombre de ligne affectée(s) par le dernier appel à le fonction "execute" = 1 (si le pseudo est déjà stocké dans la bdd)
         return false;//la fonction retourne "false"
       }
-      $req = $this->db-> prepare("INSERT INTO user (password, pseudo) VALUES (?,?)"); //
+      $req = $this->db->prepare("INSERT INTO user (pseudo,password) VALUES (?,?)"); //
       $req->execute([$pseudo, $password]);
         return true;
     }
@@ -37,19 +42,7 @@ include 'DB.php';
         return false;
       }
     }
-
-
   }
-$pdo = new Db();
-$pdo = $pdo->getPDO();
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$resultat = new User($pdo);
-$resultat->login('poulette', 'lovelace');
-echo $_SESSION['pseudo'];
-// $user1 = new User("kevin","somao");
-// $user2 = new User("Steve","somao");
-// var_dump($user1->returnName());
-// var_dump($user2->returnName());
 
 ?>
