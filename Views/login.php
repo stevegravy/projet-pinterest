@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="./Assets/CSS/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Login</title>
 </head>
 <body>
       <form class="Login degrade action" action="index.html" method="post">
         <div class="form_ctn">
           <h2>Login</h2>
+          <a id="croix" href="#"><i class="fa fa-times fa-1g" aria-hidden="true"></i></a>
           <input id="userLogin" type="text" name="user" value="user">
           <input id="passwordLogin" type="text" name="password" value="password">
           <input id="buttonLogin" type="submit" name="Login" value="Login">
