@@ -11,11 +11,11 @@
   <title>Login</title>
 </head>
 <body>
-      <form class="Login degrade action" action="index.html" method="post">
+      <form class="Login degrade action" action="index.php?action=loguser" method="post">
         <div class="form_ctn">
           <h2>Login</h2>
           <a id="croix" href="#"><i class="fa fa-times fa-1g" aria-hidden="true"></i></a>
-          <input id="userLogin" type="text" name="user" value="user">
+          <input id="userLogin" type="text" name="pseudo" value="user">
           <input id="passwordLogin" type="text" name="password" value="password">
           <input id="buttonLogin" type="submit" name="Login" value="Login">
         </div>
