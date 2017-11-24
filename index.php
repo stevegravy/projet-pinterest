@@ -1,27 +1,31 @@
 
 <?php
-define('VIEW', 'Views/');
-define('CONTROLLER', 'Controllers/');
-require_once(VIEW . 'nav.php');
+require_once('./Views/nav.php');
+require_once('./Controllers/UserController.php');
+// require_once('./Controllers/ImagesController.php');
+$usercontroller = new UserController;
+// $imagescontroler = new ImagesController;
 $action = isset($_GET['action']) ? htmlentities($_GET['action']) : 'default';
-$controller = '';
 switch ($action) {
-	case 'signup':
-		require_once(CONTROLLER . 'SignupFormController.php');
-		$controller = new SignupFormController();
+	case 'getsignuppage':
+		$usercontroller->SignUp();
 		break;
-	case 'accueil':
-		require_once(CONTROLLER . 'AccueilImagesController.php');
-		$controller = new AccueilImagesController();
+	case 'login':
+		$usercontroller->GetLoginPage();
 		break;
-	case 'upload':
-		require_once(CONTROLLER . 'UploadImagesController.php');
-		$controller = new UploadImagesController();
+	case 'loginuser':
+		$usercontroller->LoginUser($_POST['pseudo'], $_POST['password']);
 		break;
-	default:
-		require_once(CONTROLLER . 'AccueilImagesController.php');
-		$controller = new AccueilImagesController();
+	case 'signupuser':
+		$usercontroller->SignUpUser($_POST['pseudo'], $_POST['password']);
 		break;
+	case 'form':
+		$usercontroller->form();
+		break;
+
+	// default:
+	// 	$controller = new AccueilImagesController();
+	// 	break;
 }
 
 ?>
