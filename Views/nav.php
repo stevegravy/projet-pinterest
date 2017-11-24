@@ -22,7 +22,7 @@
       <div id="nav_list">
         <ul id="burger">
           <a id="threeLi" href="#"><li><i class="fa fa-bars fa-2x" aria-hidden="true"></i></li></a>
-          <a id='login2' href="#"><li class="link">User</li></a>
+          <a id='index?action=login' href="#"><li class="link">User</li></a>
           <a href="#"><li class="link">Logout</li></a>
           <a href="./form.php"><li class="link">Add</li></a>
         </ul>

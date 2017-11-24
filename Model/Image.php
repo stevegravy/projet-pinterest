@@ -57,7 +57,7 @@ class Image
         $imagesArray = $req->fetchAll(PDO::FETCH_OBJ);
         return $imagesArray;
     }
-}
+  }
 
 /*
 $image = new Image();

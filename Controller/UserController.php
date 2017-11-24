@@ -9,7 +9,7 @@ class UserController
 
     public function getSignUp()
     {
-        require '../Views/signup.php';
+      
     }
 
     public function getProfile()
@@ -17,7 +17,7 @@ class UserController
 
     }
 
-    public function login()
+    public function logUser($pseudo,$password)
     {
 
     }

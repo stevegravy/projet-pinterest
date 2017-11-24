@@ -4,6 +4,7 @@ class ImageController
 {
     public function __construct()
     {
+
     }
 
     public function uploadImage()

@@ -7,7 +7,7 @@ class User
 
     public function __construct($pdo)
     {
-        $this->db = DB::getPDO();
+      $this->db = DB::getPDO();
     }
 
 

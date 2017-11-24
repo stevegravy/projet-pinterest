@@ -27,3 +27,5 @@ switch ($action) {
 $controller->run();
 require_once(VIEW . 'footer.php');
 ?>
+
+
