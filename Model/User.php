@@ -7,7 +7,7 @@ class User
 
     public function __construct($pdo)
     {
-        $this->db = $pdo;
+        $this->db = DB::getPDO();
     }
 
 
@@ -44,7 +44,7 @@ class User
 
 }
 
-$pdo = new DB2();
+$pdo = new DB();
 $pdo = $pdo->getPDO();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

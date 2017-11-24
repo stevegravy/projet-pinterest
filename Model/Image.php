@@ -1,7 +1,7 @@
 <?php
 require '../core.php';
-require 'DB2.php';
-DB2::connect($config);
+require '.php';
+DB::connect($config);
 
 class Image
 {
@@ -10,7 +10,7 @@ class Image
 
     public function __construct()
     {
-        $this->db = DB2::getPDO();
+        $this->db = DB::getPDO();
     }
 
     public function insert($image)
