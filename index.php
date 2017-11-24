@@ -1,7 +1,7 @@
 
 <?php
 require_once('./Views/nav.php');
-require_once('./Controllers/UserController.php');
+require_once('./Controller/UserController.php');
 // require_once('./Controllers/ImagesController.php');
 $usercontroller = new UserController;
 // $imagescontroler = new ImagesController;
