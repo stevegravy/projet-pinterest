@@ -15,7 +15,7 @@
     <div id="right_content">
 
         <ul id="menu">
-          <a href="#" id="add"><li class="link"><img src="Assets/img/add.png" alt=""></li></a>
+          <a href="./form.php" id="add"><li class="link"><img src="Assets/img/add.png" alt=""></li></a>
           <a id='login' href="#"><li class="link">User</li></a>
           <a href="#"><li class="link">Logout</li></a>
         </ul>
