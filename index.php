@@ -1,26 +1,27 @@
+
 <?php
-try
-{
-    // On se connecte à MySQL
-    $pdo = new PDO('pgsql:host=ec2-54-75-233-162.eu-west-1.compute.amazonaws.com;dbname=dbhsq99nin71j4;', 'qskuutieobucyy', '239ef28ac3cbefc171b72c2d5a9c3777d544fb43b96615097a9b3e969bf33a28');
+define('VIEW', 'Views/');
+define('CONTROLLER', 'Controllers/');
+require_once(VIEW . 'nav.php');
+$action = isset($_GET['action']) ? htmlentities($_GET['action']) : 'default';
+$controller = '';
+switch ($action) {
+	case 'signup':
+		require_once(CONTROLLER . 'SignupFormController.php');
+		$controller = new SignupFormController();
+		break;
+	case 'accueil':
+		require_once(CONTROLLER . 'AccueilImagesController.php');
+		$controller = new AccueilImagesController();
+		break;
+	case 'upload':
+		require_once(CONTROLLER . 'UploadImagesController.php');
+		$controller = new UploadImagesController();
+		break;
+	default:
+		require_once(CONTROLLER . 'AccueilImagesController.php');
+		$controller = new AccueilImagesController();
+		break;
 }
-catch(Exception $e)
-{
-    // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->getMessage());
-}
-$query = 'INSERT INTO categories (nom, description) VALUES (?, ?);';
-$prep = $pdo->prepare($query);
- 
-$prep->bindValue(1, 'bertand', PDO::PARAM_STR);
-$prep->bindValue(2, 'ceci est un test pour desc', PDO::PARAM_STR);
-$prep->execute();
-$resultat = $pdo->query('SELECT * FROM categories');
-while ($donnees = $resultat->fetch())
-{
-  echo '<br/>';
-  echo $donnees['nom'];
-  echo ' : ';
-  echo $donnees['description'];
-}
+
 ?>
