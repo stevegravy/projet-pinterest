@@ -10,11 +10,6 @@ class ImageController
       $this->ImageModel = new Image();
     }
 
-
-    public function get()
-    {
-
-    }
     public function uploadImage($image)
     {
         $this->ImageModel->insert($image);
@@ -31,13 +26,13 @@ class ImageController
     //     $this->ImageModel->byId($image);
     // }
 
-    public function editImage($image)
+    public function editImage()
     {
         $this->ImageModel->update($image);
         header('location:');
     }
 
-    public function deleteImage($image)
+    public function deleteImage()
     {
         $this->ImageModel->delete($image);
         header('location:');
