@@ -191,7 +191,9 @@ textarea {
   height: 90px;
   position: absolute;
   margin: 0 auto;
+  /*
   right: calc( 50% - 54px );
+  */
   top: 50%;
   transform: translateX(-50%);
   transform: translateY(-50%);
@@ -233,13 +235,15 @@ textarea {
   width: 100%;
 }
 
-#acc_cont div{
+/*
+#acc_cont {
   height: 20%;
   width: 20%;
   background-color: blue;
   float: left;
   margin: 20px;
 }
+*/
 
 /*TEST*/
 

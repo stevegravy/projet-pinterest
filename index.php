@@ -1,10 +1,18 @@
 <?php
+require 'core.php';
+require 'Model/DB.php';
+DB::connect($config);
+
 require_once('./Views/nav.php');
+require_once('./Model/Image.php');
 require_once('./Controller/UserController.php');
 require_once('./Controller/ImageController.php');
+$action = "";
 $usercontroller = new UserController;
-$imagescontroller = new ImageController;
+$imagecontroller = new ImageController;
+
 $action = isset($_GET['action']) ? htmlentities($_GET['action']) : 'default';
+
 switch ($action) {
     case 'getsignuppage':
         $usercontroller->SignUp();
@@ -22,7 +30,7 @@ switch ($action) {
         $usercontroller->form();
         break;
     default:
-        $imagecontroller->getHomePage();
+        $imagecontroller->getImages();
         break;
 }
 

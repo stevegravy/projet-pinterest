@@ -1,5 +1,4 @@
 <?php
-require('./Model/Image.php');
 
 class ImageController
 {
@@ -18,7 +17,7 @@ class ImageController
     public function getImages()
     {
       $this->ImageModel->all();
-      require "../Views/acceuil.php";
+      require "./Views/accueil.php";
     }
 
     // public function getImagesFromUser()
@@ -26,13 +25,13 @@ class ImageController
     //     $this->ImageModel->byId($image);
     // }
 
-    public function editImage()
+    public function editImage($image)
     {
         $this->ImageModel->update($image);
         header('location:');
     }
 
-    public function deleteImage()
+    public function deleteImage($image)
     {
         $this->ImageModel->delete($image);
         header('location:');

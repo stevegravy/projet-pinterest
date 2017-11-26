@@ -1,7 +1,4 @@
 <?php
-require '../core.php';
-require '.php';
-DB::connect($config);
 
 class Image
 {
