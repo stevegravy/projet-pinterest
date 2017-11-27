@@ -21,7 +21,6 @@ class ImageController
         $imagePath = "public/images/{$title}.jpg";
 
         $img = $this->manager->make($_FILES['image']['tmp_name']);
-        $img->fit(400, null);
         $img->save($imagePath);
 
         $image = $this->dataToObject([$title, $description, $imagePath]);
