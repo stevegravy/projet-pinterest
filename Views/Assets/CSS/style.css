@@ -186,6 +186,7 @@ textarea {
     border-right: 3px dotted #D42C2C;
 }
 
+
 #navbar {
     height: 70px;
     background: #D42C2C;
@@ -196,9 +197,8 @@ textarea {
     height: 50px;
     position: absolute;
     margin: 0 auto;
-    /*
-    right: calc( 50% - 54px );
-    */
+    right: calc( 50% - 50px );
+    width: 100px;
     top: 50%;
     transform: translateX(-50%);
     transform: translateY(-50%);
@@ -279,14 +279,15 @@ textarea {
 /*TEST*/
 
 .action {
-    position: absolute;
+    position: fixed;
     opacity: 0;
     visibility: hidden;
     transition: visibility 0s, opacity 0.3 Ss linear;
+
 }
 
 .actionOnclick {
-    position: absolute;
+    position: fixed;
     opacity: 1;
     transition: visibility 0s, opacity 0.3s linear;
     visibility: visible;
@@ -324,7 +325,7 @@ textarea {
 #burger i {
     color: white;
     width: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     background-color: none;
 }
 
@@ -363,7 +364,7 @@ textarea {
 
 .grid {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .desc {
