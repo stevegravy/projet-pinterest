@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <?php include('Views/login.php') ?>
 <nav id="navbar">
-    <a href="index.php?action=accueil"><img id="logo" src="./Views/Assets/img/logo.svg" alt=""></a>
+    <a href="index.php" ><img id="logo" src="./Views/Assets/img/logo.svg" alt=""></a>
 
     <?php if(isset($_SESSION['login']) && $_SESSION['login'] == true):?>
     <div id="right_content">
@@ -22,8 +23,8 @@
         </ul>
       <div id="nav_list">
         <ul id="burger">
-          <a id="threeLi" href="#"><li><i class="fa fa-bars fa-2x" aria-hidden="true"></i></li></a>
-          <a id='index?action=login' href="#"><li class="link">User</li></a>
+          <a id="threeLi" href="#"><li><i class="fa fa-bars" aria-hidden="true"></i></li></a>
+          <a id='index?action=login' href="#"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>
           <a href="#"><li class="link">Logout</li></a>
           <a href="./form.php"><li class="link">Add</li></a>
         </ul>
@@ -32,13 +33,13 @@
     <?php elseif(!isset($_SESSION['login'])): ?>
         <div id="right_content">
             <ul id="menu">
-                <a id='login' href="#"><li class="link">login</li></a>
-                <a href="index.php?action=getsignuppage"><li class="link">signup</li></a>
+                <a href="#"><li  id='login' class="link">Login</li></a>
+                <a href="index.php?action=getsignuppage"><li class="link">Signup</li></a>
             </ul>
             <div id="nav_list">
                 <ul id="burger">
-                    <a id="threeLi" href="#"><li><i class="fa fa-bars fa-2x" aria-hidden="true"></i></li></a>
-                    <a id='index?action=login' href="#"><li class="link">User</li></a>
+                    <a id="threeLi" href="#"><li><i class="fa fa-bars" aria-hidden="true"></i></li></a>
+                    <a id='login2' href="#"><li class="link">Login</li></a>
                     <a href="index?action=logout"><li class="link">Logout</li></a>
                     <a href="./form.php"><li class="link">Add</li></a>
                 </ul>
