@@ -12,7 +12,7 @@
 <body>
   <?php include('Views/login.php') ?>
 <nav id="navbar">
-    <a ><img id="logo" src="./Views/Assets/img/logo.svg" alt=""></a>
+    <a href="index.php" ><img id="logo" src="./Views/Assets/img/logo.svg" alt=""></a>
 
     <?php if(isset($_SESSION['login']) && $_SESSION['login'] == true):?>
     <div id="right_content">

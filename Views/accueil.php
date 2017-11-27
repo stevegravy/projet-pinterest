@@ -1,10 +1,8 @@
 <?php include('./Views/login.php') ?>
 <div id="acc_cont">
-
     <form id="searchForm" action="index?action=searchImage">
         <input id="searchBar" type="text" placeholder="search">
     </form>
-
     <div class="grid">
         <div class="grid-item">
             <img src="./public/images/20733-all-american-club-sandwich-600x600.jpg" alt="">
