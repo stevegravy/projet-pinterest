@@ -29,6 +29,15 @@ switch ($action) {
     case 'imageupload':
         $imagecontroller->uploadImage();
         break;
+    case 'admin':
+        $imagecontroller->getAdminPage();
+        break;
+    case 'deleteimage':
+        $imagecontroller->deleteImage();
+        break;
+    case 'editImage':
+        $imagecontroller->editImage();
+        break;
     default:
         $imagecontroller->getImages();
         break;
@@ -36,9 +45,3 @@ switch ($action) {
 
 include "./Views/footer.php";
 ?>
-
-
-<?php
-var_dump($_SESSION);
-?>
-
