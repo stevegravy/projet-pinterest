@@ -1,4 +1,3 @@
-
 <?php
 
 use Intervention\Image\ImageManager;
@@ -27,11 +26,13 @@ class ImageController
 
         $image = $this->dataToObject([$title, $description, $imagePath]);
         $this->ImageModel->insert($image);
+
+        header("location:index.php?action=accueil");
     }
 
     public function getImages()
     {
-        $this->ImageModel->all();
+        $images = $this->ImageModel->all();
         require "./Views/accueil.php";
     }
 

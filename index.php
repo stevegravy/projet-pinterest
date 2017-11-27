@@ -38,7 +38,3 @@ include "./Views/footer.php";
 ?>
 
 
-<?php
-var_dump($_SESSION);
-?>
-
