@@ -19,14 +19,14 @@ class ImageController
     {
         $title = $_POST['title'];
         $description = $_POST['description'];
-        $imagePath = "public/images/{$title}.jpg";
+        $imagePath = "{$title}.jpg";
 
         $img = $this->manager->make($_FILES['image']['tmp_name']);
         $img->fit(400, null);
         $img->save($imagePath);
 
-        $image = $this->dataToObject([$title, $description, $imagePath]);
-        $this->ImageModel->insert($image);
+        //$image = $this->dataToObject([$title, $description, $imagePath]);
+        //$this->ImageModel->insert($image);
 
         header("location:index.php");
     }
