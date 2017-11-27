@@ -1,17 +1,14 @@
 <?php
-require 'core.php';
-require 'Model/DB.php';
-DB::connect($config);
+require_once 'bootstrap.php';
 
-require_once('./Views/nav.php');
-require_once('./Model/Image.php');
-require_once('./Controller/UserController.php');
-require_once('./Controller/ImageController.php');
-$action = "";
 $usercontroller = new UserController;
 $imagecontroller = new ImageController;
 
 $action = isset($_GET['action']) ? htmlentities($_GET['action']) : 'default';
+?>
+
+<?php
+include "./Views/nav.php";
 
 switch ($action) {
     case 'getsignuppage':
@@ -29,9 +26,19 @@ switch ($action) {
     case 'form':
         $usercontroller->form();
         break;
+    case 'imageupload':
+        $imagecontroller->uploadImage();
+        break;
     default:
         $imagecontroller->getImages();
         break;
 }
 
+include "./Views/footer.php";
 ?>
+
+
+<?php
+var_dump($_SESSION);
+?>
+

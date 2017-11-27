@@ -1,238 +1,269 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding:0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-  background-color: #FAFAFA;
-  font-family: Roboto, serif;
+body {
+    background-color: #FAFAFA;
+    font-family: Roboto, serif;
 }
 
 .degrade {
-  background: linear-gradient(139.56deg, #D42C2C  9.22%, #F2994A  113.7%);
+    background: linear-gradient(139.56deg, #D42C2C 9.22%, #F2994A 113.7%);
 
 }
 
 .Login {
-  box-shadow: 0px 20px 60px rgba(235, 87, 87, 0.5);
-  border-radius: 15px;
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 200px;
-  border-radius: 15px;
-  padding-bottom: 30px;
-  font-size: 200%;
-  left:calc(50% - 200px);
+    box-shadow: 0px 20px 60px rgba(235, 87, 87, 0.5);
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 200px;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    font-size: 200%;
+    left: calc(50% - 200px);
+    z-index: 5;
 }
 
-@media screen and (max-width:475px){
-  .Login {
-    max-width: 300px;
-    left: calc(50% - 150px);
-    margin-top: 20px;
-  }
+@media screen and (max-width: 475px) {
+    .Login {
+        max-width: 300px;
+        left: calc(50% - 150px);
+        margin-top: 20px;
+    }
 }
 
-@media screen and (max-width:650px) {
-  .Login {
-      width: 90%;
-  }
+@media screen and (max-width: 650px) {
+    .Login {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 800px) {
-  #menu{
-    visibility: hidden;
-  }
+    #menu {
+        visibility: hidden;
+    }
 
-  #burger i{
-    visibility: visible;
-  }
+    #add {
+        visibility: hidden;
+    }
 
-  #burger .link:hover{
-    background-color: #eee;
+    #burger i {
+        visibility: visible;
+    }
+
+    #burger .link:hover {
+        background-color: #eee;
+        color: #D42C2C;
+    }
+}
+
+@media screen and (min-width: 651px) and (max-width: 1180px) {
+    .Login {
+        width: 60%;
+    }
+
+}
+
+.Login h2 {
+    font-family: 'Lobster', cursive;
     color: #D42C2C;
-  }
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    font-size: 180%;
 }
 
-@media screen and (min-width:651px) and (max-width:1180px) {
-  .Login {
-      width: 60%;
-  }
-
+.degrade h2 {
+    color: white;
 }
 
-.Login h2{
-  font-family: 'Lobster', cursive;
-  color: #D42C2C;
-  text-align: center;
-  padding-top: 30px;
-  margin-bottom: 30px;
-  font-size: 180%;
+.Login input[type="text"] {
+    border: none;
+    padding: 10px;
+    font-weight: 100;
+    width: 100%;
+    background: #F2F2F2;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #FF6969;
 }
 
-.degrade h2{
-  color: white;
-}
-
-.Login input[type="text"]{
-  border: none;
-  padding: 10px;
-  font-weight: bold;
-  width: 100%;
-  background: #F2F2F2;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: #FF6969;
-}
-
-.degrade input[type="text"]{
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: rgba(255, 255, 255, 0.45);
+.degrade input[type="text"] {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.45);
 }
 
 textarea {
-  font-size: 75%;
-  border: none;
-  padding: 10px;
-  font-family: 'Roboto';
-  font-weight: bold;
-  width: 100%;
-  background: #F2F2F2;
-  margin-top: 25px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: #FF6969;
-  height: 150px;
-  resize: none;
+    font-size: 75%;
+    border: none;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    width: 100%;
+    background: #F2F2F2;
+    margin-top: 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #FF6969;
+    height: 150px;
+    resize: none;
 }
 
-.Login .form_ctn{
-  width: 80%;
-  margin: 0 auto;
+.Login .form_ctn {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.Login input{
-  border: none;
-  font-size: 100%;
-  border-radius: 5px;
-  margin: 30px auto 0;
+.Login input {
+    border: none;
+    font-size: 100%;
+    border-radius: 5px;
+    margin: 30px auto 0;
 }
 
-.Login input[type="file"]{
-  text-align: center;
-  width: 100%;
-  font-size: 50%;
+.Login input[type="file"] {
+    text-align: center;
+    width: 100%;
+    font-size: 50%;
 }
 
-#croix{
-  width: 40px;
-  float: left;
-  position: absolute;
-  right: 5%;
-  top: 3%;
-  color: white;
+#croix {
+    width: 40px;
+    float: left;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    color: white;
 }
 
 #buttonLogin {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #DB4949;
-  text-decoration: none;
-  border: none;
-  font-family: 'Lobster', cursive;
-  padding: 10px;
-  width: 170px;
-  margin-top: 70px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #DB4949;
+    text-decoration: none;
+    border: none;
+    font-family: 'Lobster', cursive;
+    padding: 10px;
+    width: 170px;
+    margin-top: 70px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#buttonLogin:hover{
-  transition: 0.3s;
-  background-color: #FF6969;
-  color: white;
+#buttonLogin:hover {
+    transition: 0.3s;
+    background-color: #FF6969;
+    color: white;
 }
 
-#buttonForm{
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  text-decoration: none;
-  border: none;
-  font-family: 'Lobster', cursive;
-  padding: 10px;
-  width: 170px;
-  margin-top: 70px;
-  background: #D42C2C ;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+#buttonForm {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-family: 'Lobster', cursive;
+    padding: 10px;
+    width: 170px;
+    margin-top: 70px;
+    background: #D42C2C;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#buttonForm:hover{
-  background-color: white;
-  color: #D42C2C;
-  border-left: 3px dotted #D42C2C;
-  border-right: 3px dotted #D42C2C;
+#buttonForm:hover {
+    background-color: white;
+    color: #D42C2C;
+    border-left: 3px dotted #D42C2C;
+    border-right: 3px dotted #D42C2C;
 }
 
 #navbar {
-  height: 100px;
-  background: #D42C2C;
-  position: relative;
+    height: 70px;
+    background: #D42C2C;
+    position: relative;
 }
 
 #logo {
-  height: 90px;
-  position: absolute;
-  margin: 0 auto;
-  /*
-  right: calc( 50% - 54px );
-  */
-  top: 50%;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
+    height: 50px;
+    position: absolute;
+    margin: 0 auto;
+    /*
+    right: calc( 50% - 54px );
+    */
+    top: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
 }
 
-#fileload{
-  padding: 30px;
-  border: 2px dotted red;
+#fileload {
+    padding: 30px;
+    border: 2px dotted red;
 }
 
 #menu {
-  display: flex;
-  justify-content: space-between;
-  width: 130px;
-  color: white;
-  top: 50%;
-  right: 50px;
-  font-size: 20px;
-  position: absolute;
-  transform: translateY(-50%);
-  list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    color: white;
+    top: 50%;
+    right: 50px;
+    font-size: 20px;
+    position: absolute;
+    transform: translateY(-50%);
+    list-style-type: none;
 }
 
-#menu a{
-  text-decoration: none;
-  color: white;
+#menu a {
+    text-decoration: none;
+    color: white;
 }
 
-#add{
-  position: absolute;
-  right: 150px;
-  transform: translateY(-50%);
-  top: 50%;
-  margin-right: 20px;
+#add {
+    position: absolute;
+    right: 150px;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-right: 50px;
 }
 
-#acc_cont{
-  height: 100vh;
-  width: 100%;
+#add img {
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+}
+
+#acc_cont {
+    padding: 0 50px;
+}
+
+#searchForm {
+    width: 700px;
+    margin: 50px auto 0;
+}
+
+#searchBar {
+    background: rgba(0, 0, 0, 0.035);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    color: rgba(29, 29, 29, 0.86);
+    font-weight: bold;
+}
+
+#searchBar::placeholder {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.25);
 }
 
 /*
@@ -247,59 +278,107 @@ textarea {
 
 /*TEST*/
 
-.action{
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility 0s, opacity 0.3Ss linear;
+.action {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.3 Ss linear;
 }
 
-.actionOnclick{
-  position: absolute;
-  opacity: 1;
-  transition: visibility 0s, opacity 0.3s linear;
-  visibility: visible;
+.actionOnclick {
+    position: absolute;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s linear;
+    visibility: visible;
 }
 
-#nav_list{
-  visibility: hidden;
+#nav_list {
+    visibility: hidden;
 }
 
-#burger{
-  position: absolute;
-  display: block;
-  right: 0%;
-  top:20%;
+#burger {
+    position: absolute;
+    display: block;
+    right: 0%;
+    z-index: 5;
+    top: 20%;
 }
 
-#burger li{
-  color: white;
-  text-decoration: none;
-  list-style-type: none;
-  padding: 10px 30px;
-  font-size: 20px;
-  text-align: center;
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.45);
 }
 
-#burger li.link{
-  background-color: #D42C2C;
+#burger li {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-align: center;
 }
 
-#burger i{
-  color: white;
-  width: 40px;
-  margin-bottom: 20px;
-  background-color: none;
+#burger li.link {
+    background-color: #D42C2C;
 }
 
-#threeLi a{
-  background-color: none;
+#burger i {
+    color: white;
+    width: 40px;
+    margin-bottom: 20px;
+    background-color: none;
 }
 
-#burger a{
-  text-decoration: none;
+#threeLi a {
+    background-color: none;
 }
 
-.visible{
-  visibility: visible;
+#burger a {
+    text-decoration: none;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.grid-item {
+    width: calc(100% / 4 * 1);
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+
+    font-family: 'Rubik', sans-serif;
+}
+
+@media screen and (max-width: 1080px) {
+    .grid-item {
+        width: calc(100% / 3 * 1);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .grid-item {
+        width: calc(100% / 2 * 1);
+    }
+}
+
+.grid {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.desc {
+
+    width: 100%;
+    padding: 10px;
+    color: #1d1d1d;
+    bottom: 0;
+}
+
+.desc::first-letter {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
 }

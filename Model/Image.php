@@ -13,7 +13,7 @@ class Image
     public function insert($image)
     {
         $req = $this->db->prepare("insert into image (chemin,titre,description,user_id) values (?,?,?,?)");
-        $success = $req->execute([$image->chemin, $image->title, $image->description, $image->user_id]);
+        $success = $req->execute([$image->chemin, $image->title, $image->description, $_SESSION['id']]);
 
         if ($success) {
             return true;
@@ -54,19 +54,5 @@ class Image
         $imagesArray = $req->fetchAll(PDO::FETCH_OBJ);
         return $imagesArray;
     }
-  }
+}
 
-/*
-$image = new Image();
-print_r($image->all());
-$obj = new stdClass();
-$obj->id = "1";
-$obj->chemin = "public\images\lol.jpg";
-$obj->title = "mon titre update";
-$obj->description = "ma desc update 2";
-$obj->user_id = 1;
-
-$image->all();
-
-print_r($image->byId($obj));
-$image->update($obj);*/

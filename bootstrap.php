@@ -1,9 +1,11 @@
 <?php
+require 'core.php';
+require 'Model/DB.php';
+require 'vendor/autoload.php';
 
-require_once('Model/User.php');
-require_once('Model/Image.php');
-require_once('Controller/UserController.php');
-require_once('Controller/ImageController.php');
-$UserController = new UserController();
-$ImageController = new ImageController();
-$action = "";
+DB::connect($config);
+session_start();
+
+include('./Model/Image.php');
+include('./Controller/UserController.php');
+include('./Controller/ImageController.php');
