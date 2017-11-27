@@ -1,8 +1,8 @@
 <?php
 
 $config = (object) [
-    'name' => 'pinterest',
+    'name' => 'test',
     'username' => 'root',
-    'password' => '',
+    'password' => 'user',
     'connection' => 'mysql:host=localhost'
 ];
