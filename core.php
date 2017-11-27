@@ -3,6 +3,6 @@
 $config = (object) [
     'name' => 'pinterest',
     'username' => 'root',
-    'password' => '',
+    'password' => 'user',
     'connection' => 'mysql:host=localhost'
 ];
