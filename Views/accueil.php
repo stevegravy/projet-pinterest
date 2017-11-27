@@ -3,16 +3,17 @@
     <form id="searchForm" action="index?action=searchImage">
         <input id="searchBar" type="text" placeholder="search">
     </form>
-    <?php foreach ($images as $image)
-        echo "    
-        <div class='grid'>
+    <div class='grid'>
+        <?php foreach ($images as $image)
+            echo "    
         <div class='grid-item'>
             <img src='{$image->chemin}'>
             <div class='desc'>
                 <h4>{$image->titre}</h4>
             </div>
-        </div>"
-    ?>
+        "
+        ?>
+    </div>
     <!--<div class="grid-item">
         <img src="./public/images/image.png" alt="">
         <div class="desc">
