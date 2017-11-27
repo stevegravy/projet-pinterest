@@ -5,7 +5,7 @@ class UserController {
 
 
   public function GetLoginPage(){
-    require_once './Views/login.php';
+        require_once './Views/login.php';
   }
 
   	public function Form(){
@@ -23,6 +23,11 @@ class UserController {
         }else{
             header('location: index.php?action=login');
         }
+    }
+
+    public function LogoutUser(){
+        require_once 'index.php';
+        session_destroy();
     }
 
     public function SignUpUser($pseudo, $password){

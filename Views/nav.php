@@ -12,20 +12,21 @@
 <body>
   <?php include('Views/login.php') ?>
 <nav id="navbar">
-    <a href="index.php" ><img id="logo" src="./Views/Assets/img/logo.svg" alt=""></a>
+    <a href="./index.php?action=default"><img id="logo" src="./Views/Assets/img/logo.svg" alt=""></a>
 
-    <?php if(isset($_SESSION['login']) && $_SESSION['login'] == true):?>
+    <?php if(isset($_SESSION['login'])): ?>
     <div id="right_content">
         <a href="index.php?action=form" id="add" ><img src="./Views/Assets/img/add.png" alt=""></a>
         <ul id="menu">
           <a href="#"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>
-          <a href="#"><li class="link">Logout</li></a>
+
+          <a href="./index.php?action=logout"><li class="link">Logout</li></a>
         </ul>
       <div id="nav_list">
         <ul id="burger">
           <a id="threeLi" href="#"><li><i class="fa fa-bars" aria-hidden="true"></i></li></a>
-          <a id='index?action=login' href="#"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>
-          <a href="#"><li class="link">Logout</li></a>
+          <a id='index' href="index?action=login"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>
+          <a href="./index.php?action=logout"><li class="link">Logout</li></a>
           <a href="./form.php"><li class="link">Add</li></a>
         </ul>
       </div>

@@ -25,10 +25,10 @@ class User
 
     public function login($pseudo, $password)
     {
-        $req = $this->db->prepare("SELECT * FROM user where pseudo = (?)");
-        $req->execute([$pseudo]);
+        $req = $this->db->prepare("SELECT * FROM user where pseudo = (?) && password = (?)");
+        $req->execute([$pseudo, $password]);
         $user_data = $req->fetch();
-        if ($req->rowCount() > 0) {
+        if ($req->rowCount() == 1) {
             $_SESSION ['login'] = true;
             $_SESSION ['id'] = $user_data['id'];
             $_SESSION ['pseudo'] = $user_data['pseudo'];
