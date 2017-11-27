@@ -37,6 +37,12 @@ class ImageController
         require "./Views/accueil.php";
     }
 
+    public function getAdminPage()
+    {
+        $images = $this->ImageModel->all();
+        require "./Views/admin.php";
+    }
+
     // public function getImagesFromUser()
     // {
     //     $this->ImageModel->byId($image);
@@ -48,9 +54,12 @@ class ImageController
         header('location:');
     }
 
-    public function deleteImage($image)
+    public function deleteImage()
     {
-        $this->ImageModel->delete($image);
+        $deleteId = $_POST['id'];
+        var_dump($_POST['id']);
+        echo $_POST['id'];
+        $this->ImageModel->delete($deleteId);
         header('location:');
     }
 

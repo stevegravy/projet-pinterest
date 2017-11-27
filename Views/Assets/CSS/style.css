@@ -235,6 +235,21 @@ textarea {
     margin-right: 50px;
 }
 
+#tableAdmin {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+
+#tableAdmin td {
+  padding: 5px;
+}
+
+#tableAdmin tr:nth-child(2){
+  background-color: #D42C2C;
+  color: white;
+}
+
 #add img {
     margin-top: 5px;
     height: 30px;
