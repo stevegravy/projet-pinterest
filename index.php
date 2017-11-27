@@ -20,6 +20,9 @@ switch ($action) {
     case 'loginuser':
         $usercontroller->LoginUser($_POST['pseudo'], $_POST['password']);
         break;
+    case 'logout':
+        $usercontroller->LogoutUser();
+        break;
     case 'signupuser':
         $usercontroller->SignUpUser($_POST['pseudo'], $_POST['password']);
         break;
@@ -45,5 +48,6 @@ switch ($action) {
 
 include "./Views/footer.php";
 ?>
+
 
 
