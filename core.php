@@ -1,5 +1,6 @@
 <?php
 
+//phpinfo();
 $config = (object) [
     'name' => 'dbhsq99nin71j4',
     'username' => 'qskuutieobucyy',

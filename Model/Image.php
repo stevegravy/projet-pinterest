@@ -42,7 +42,7 @@ class Image
 
     public function byId($image)
     {
-        $req = $this->db->prepare("select * from image where id=(?)");
+        $req = $this->db->prepare("select * from  image where id=(?)");
         $req->execute([$image->id]);
         $imageObject = $req->fetchObject();
         return $imageObject;
@@ -50,7 +50,7 @@ class Image
 
     public function all()
     {
-        $req = $this->db->query("select * from image");
+        $req = $this->db->query("select * from  image");
         $imagesArray = $req->fetchAll(PDO::FETCH_OBJ);
         return $imagesArray;
     }
