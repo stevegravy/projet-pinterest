@@ -9,7 +9,7 @@ if (!isset($_SESSION) || $_SESSION['role'] != 1) {
         <th>Image</th>
         <th>Titre</th>
         <th>Description</th>
-        <th>Actions</th>
+        <th id='action'>Actions</th>
     </tr>
     <?php foreach ($images as $image) { ?>
         <?php echo "
