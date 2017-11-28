@@ -20,6 +20,9 @@ switch ($action) {
     case 'loginuser':
         $usercontroller->LoginUser($_POST['pseudo'], $_POST['password']);
         break;
+    case 'logout':
+        $usercontroller->LogoutUser();
+        break;
     case 'signupuser':
         $usercontroller->SignUpUser($_POST['pseudo'], $_POST['password']);
         break;
@@ -32,7 +35,10 @@ switch ($action) {
     case 'admin':
         $imagecontroller->getAdminPage();
         break;
-    case 'deleteimage':
+    case 'adminEdit':
+        $imagecontroller->getAdminEditPage();
+        break;
+    case 'deleteImage':
         $imagecontroller->deleteImage();
         break;
     case 'editImage':
@@ -45,5 +51,6 @@ switch ($action) {
 
 include "./Views/footer.php";
 ?>
+
 
 
