@@ -33,6 +33,7 @@ class User
             $_SESSION ['id'] = $user_data['id'];
             $_SESSION ['pseudo'] = $user_data['pseudo'];
             $_SESSION ['password'] = $user_data['password'];
+            $_SESSION ['role'] = $user_data['role'];
             return true;
         } else {
             return false;

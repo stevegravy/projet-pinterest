@@ -186,7 +186,6 @@ textarea {
     border-right: 3px dotted #D42C2C;
 }
 
-
 #navbar {
     height: 70px;
     background: #D42C2C;
@@ -197,7 +196,7 @@ textarea {
     height: 50px;
     position: absolute;
     margin: 0 auto;
-    right: calc( 50% - 50px );
+    right: calc(50% - 50px);
     width: 100px;
     top: 50%;
     transform: translateX(-50%);
@@ -233,6 +232,25 @@ textarea {
     transform: translateY(-50%);
     top: 50%;
     margin-right: 50px;
+}
+
+#tableAdmin {
+    width: 60%;
+    max-width: 700px;
+    text-align: left;
+    margin: 200px auto;
+}
+
+#tableAdmin td {
+    padding: 5px;
+}
+
+#tableAdmin .actions {
+    display: flex;
+}
+
+#tableAdmin img {
+    width: 50px;
 }
 
 #add img {

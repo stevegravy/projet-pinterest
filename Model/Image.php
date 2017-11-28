@@ -34,10 +34,10 @@ class Image
         }
     }
 
-    public function delete($image)
+    public function delete($deleteId)
     {
-        $req = $this->db->prepare("delete from user where id=(?)");
-        $req->execute([$image->id]);
+        $req = $this->db->prepare("delete from image where id=(?)");
+        $req->execute([$deleteId]);
     }
 
     public function byId($image)
@@ -55,4 +55,3 @@ class Image
         return $imagesArray;
     }
 }
-

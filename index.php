@@ -32,6 +32,18 @@ switch ($action) {
     case 'imageupload':
         $imagecontroller->uploadImage();
         break;
+    case 'admin':
+        $imagecontroller->getAdminPage();
+        break;
+    case 'adminEdit':
+        $imagecontroller->getAdminEditPage();
+        break;
+    case 'deleteImage':
+        $imagecontroller->deleteImage();
+        break;
+    case 'editImage':
+        $imagecontroller->editImage();
+        break;
     default:
         $imagecontroller->getImages();
         break;
@@ -39,7 +51,6 @@ switch ($action) {
 
 include "./Views/footer.php";
 ?>
-
 
 
 

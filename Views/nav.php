@@ -18,8 +18,11 @@
     <div id="right_content">
         <a href="index.php?action=form" id="add" ><img src="./Views/Assets/img/add.png" alt=""></a>
         <ul id="menu">
-          <a href="#"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>
-
+            <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
+                <a href="index.php?action=admin"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>
+            <?php else: ?>
+                <a href="index.php?action=accueil"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>
+            <?php endif; ?>
           <a href="./index.php?action=logout"><li class="link">Logout</li></a>
         </ul>
       <div id="nav_list">

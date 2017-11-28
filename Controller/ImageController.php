@@ -1,4 +1,3 @@
-
 <?php
 
 use Intervention\Image\ImageManager;
@@ -19,16 +18,31 @@ class ImageController
     {
         $title = $_POST['title'];
         $description = $_POST['description'];
-        $imagePath = "{$title}.jpg";
 
-        $img = $this->manager->make($_FILES['image']['tmp_name']);
-        $img->fit(400, null);
-        $img->save($imagePath);
+        if (isset($_FILES['image'])) {
+            $errors = array();
+            $file_tmp = $_FILES['image']['tmp_name'];
+            $file_ext = strtolower(end(explode('.', $_FILES['image']['name'])));
+            /* $file_name = $_FILES['image']['name'];
+             $file_type = $_FILES['image']['type'];
+             $file_size = $_FILES['image']['size'];*/
 
-        //$image = $this->dataToObject([$title, $description, $imagePath]);
-        //$this->ImageModel->insert($image);
+            $fileExtension = array("jpeg", "jpg", "png", "webp");
 
-        header("location:index.php");
+            if (in_array($file_ext, $fileExtension) === false) {
+                $errors[] = "extension not allowed, please choose a JPEG or PNG file.";
+                header("location:index.php?action=form");
+            }
+            if (empty($errors) == true) {
+                move_uploaded_file($file_tmp, "public/images/" . $title . "." . $file_ext);
+                $imagePath = "public/images/" . $title . "." . $file_ext;
+                $image = $this->dataToObject([$title, $description, $imagePath]);
+                $this->ImageModel->insert($image);
+            } else {
+                print_r($errors);
+            }
+        }
+        header("location:index.php?action=accueil");
     }
 
     public function getImages()
@@ -37,21 +51,38 @@ class ImageController
         require "./Views/accueil.php";
     }
 
-    // public function getImagesFromUser()
-    // {
-    //     $this->ImageModel->byId($image);
-    // }
-
-    public function editImage($image)
+    public function getAdminPage()
     {
-        $this->ImageModel->update($image);
-        header('location:');
+        $images = $this->ImageModel->all();
+        require "./Views/admin.php";
     }
 
-    public function deleteImage($image)
+    public function getAdminEditPage()
     {
-        $this->ImageModel->delete($image);
-        header('location:');
+        require './Views/adminEdit.php';
+    }
+
+
+    public function editImage()
+    {
+
+        $title = $_POST['titre'];
+        $description = $_POST['description'];
+        $id = $_POST['id'];
+
+        $image = $this->dataToObject([$title, $description, ""]);
+        $image->id = $id;
+
+        if ($this->ImageModel->update($image)) {
+            header('location:index.php?action=admin');
+        }
+    }
+
+    public function deleteImage()
+    {
+        $deleteId = $_POST['id'];
+        $this->ImageModel->delete($deleteId);
+        header('location:index.php?action=admin');
     }
 
     private function dataToObject($array)
@@ -63,3 +94,9 @@ class ImageController
         return $imageObject;
     }
 }
+
+
+// public function getImagesFromUser()
+// {
+//     $this->ImageModel->byId($image);
+// }
