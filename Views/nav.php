@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="Views//Assets/CSS/style.css">
+    <title>Pinterest</title>
+    <link rel="icon" href="./Views/Assets/img/logo.ico" type="image/x-icon"/>
+    <!---<meta property="og:image" content="./Views/Assets/img/logo.ico" />--->
+    <link rel="stylesheet" href="Views/Assets/CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">

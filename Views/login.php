@@ -3,7 +3,7 @@
         <h2>Login</h2>
         <a id="croix" href="#"><i class="fa fa-times fa-1g" aria-hidden="true"></i></a>
         <input id="userLogin" type="text" name="pseudo" placeholder="pseudo">
-        <input id="passwordLogin" type="text" name="password" placeholder="password">
+        <input pattern=".{8,}" id="passwordLogin" type="password" name="password" placeholder="password" required title="8 caractères minimum avec une majuscule, une minuscule et un chiffre">
         <input id="buttonLogin" type="submit" name="Login" value="Login">
     </div>
 </form>

@@ -28,10 +28,21 @@ class UserController
 
     public function LoginUser($pseudo, $password)
     {
-        if ($this->usermodel->login($pseudo, $password)) {
-            header('location: index.php?action=accueil');
+        $longueur = strlen($password);
+        $uppercase = preg_match('@[A-Z]@', $password);
+        $lowercase = preg_match('@[a-z]@', $password);
+        $number = preg_match('@[0-9]@', $password);
+        if (!$uppercase || !$lowercase || !$number || $longueur < 8) {
+            echo "Le mot de passe doit contenir au moins 8 caractères avec une majuscule, une minuscule et un chiffre";
         } else {
-            header('location: index.php?action=getsignuppage');
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            echo($hashed_password);
+            if ($this->usermodel->login($pseudo, $hashed_password)) {
+                header('location: index.php?action=accueil');
+            } else {
+                header('location: index.php?action=getsignuppage');
+                echo "Le mot de passe ou le pseudo n'est pas valide, essayez encore...";
+            }
         }
     }
 
@@ -43,13 +54,22 @@ class UserController
 
     public function SignUpUser($pseudo, $password)
     {
-        if ($this->usermodel->Signup($pseudo, $password)) {
-            header('location: index.php?action=form');
+        $longueur = strlen($password);
+        $uppercase = preg_match('@[A-Z]@', $password);
+        $lowercase = preg_match('@[a-z]@', $password);
+        $number = preg_match('@[0-9]@', $password);
+        if (!$uppercase || !$lowercase || !$number || $longueur < 8) {
+            echo "Le mot de passe doit contenir au moins 8 caractères avec une majuscule, une minuscule et un chiffre";
         } else {
-            header('location: index.php?action=login');
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            echo($hashed_password);
+            if ($this->usermodel->Signup($pseudo, $hashed_password)) {
+                header('location: index.php?action=login');
+            } else {
+                $_SESSION ['erreur'] = "Le mot de passe ou le pseudo n'est pas valide, essayez encore...";
+
+                header('location: index.php?action=signup');
+            }
         }
     }
 }
-
-
-?>
