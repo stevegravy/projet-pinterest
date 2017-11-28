@@ -19,6 +19,27 @@ class ImageController
         $title = $_POST['title'];
         $description = $_POST['description'];
 
+        $title = trim($title);
+        if ((isset($title) && isset($description)) && ($title == "" || $description == "")){
+          return $error1;
+        }
+
+        if (strlen($title) >= 35){
+          return $error2;
+        }
+
+        if (strlen($description) >= 140){
+          return $error3;
+        }
+
+        if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/',$title)){
+          return $error4;
+        }
+
+        if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/',$description)){
+          return $error5;
+        }
+
         if (isset($_FILES['image'])) {
             $errors = array();
             $file_tmp = $_FILES['image']['tmp_name'];
