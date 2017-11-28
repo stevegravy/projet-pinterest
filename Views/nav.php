@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="Views//Assets/CSS/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Views/Assets/img/favicon-16x16.png">
+    <link rel="stylesheet" href="Views/Assets/CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">

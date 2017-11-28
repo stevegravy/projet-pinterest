@@ -51,6 +51,3 @@ switch ($action) {
 
 include "./Views/footer.php";
 ?>
-
-
-

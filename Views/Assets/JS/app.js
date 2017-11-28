@@ -6,12 +6,6 @@ var butOff = document.querySelector('.butOff');
 var menu = document.querySelector('#burger');
 var butLogin2 = document.getElementById('login2');
 var croix = document.getElementById('croix');
-console.log(butLogin);
-console.log(butOff);
-console.log(butOn);
-
-
-
 
 croix.addEventListener('click', function(){
   Login.classList.add('action');
