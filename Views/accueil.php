@@ -21,10 +21,8 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var elem = document.querySelector('.grid');
-        console.log(elem);
         var msnry = new Masonry(elem, {
             itemSelector: '.grid-item',
         });
     });
 </script>
-

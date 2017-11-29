@@ -27,6 +27,21 @@ body {
     z-index: 5;
 }
 
+.form_ctn .erreur {
+    box-shadow: 0px 20px 60px rgba(32, 32, 32, 0.5);
+    border-radius: 5px;
+    background-color: #3F51B5;
+    color: #eeeeee;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: Roboto, serif;
+    margin-top: 50px;
+    padding: 25px 0 25px 0;
+    font-size: large;
+    font-weight: bolder;
+}
+
 @media screen and (max-width: 475px) {
     .Login {
         max-width: 300px;
@@ -123,6 +138,10 @@ textarea {
     font-size: 100%;
     border-radius: 5px;
     margin: 30px auto 0;
+}
+
+#textForm::placeholder,#description::placeholder{
+  color: #FF6969;
 }
 
 .Login input[type="file"] {
@@ -353,6 +372,55 @@ textarea {
     visibility: visible;
 }
 
+#editForm {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+#editForm h1 {
+  font-family: 'Lobster';
+  font-size: 50px;
+  color: #D42C2C;
+  margin-bottom: 25px;
+}
+
+#editForm p {
+  margin-top: 10px;
+}
+
+#editForm input{
+  font-size: 20px;
+  color: black;
+}
+
+#editForm textarea {
+  width: 200px;
+  padding: 5px;
+  color: black;
+  background-color: rgba(212, 44, 44, 0.25);
+  margin-top: 20px;
+  font-size: 20px;
+  width: 90%;
+  height: 200px;
+}
+
+#editForm input[type='text']{
+  width: 200px;
+  background-color: rgba(212, 44, 44, 0.25);
+  margin-top: 0px;
+  width: 90%;
+}
+
+#editForm input[type='submit']{
+  margin-top: 10px;
+  background-color: rgba(212, 44, 44, 0.9);
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+}
+
 #nav_list {
     visibility: hidden;
 }
@@ -370,7 +438,7 @@ textarea {
 }
 
 #burger li {
-    color: red;
+    color: white;
     text-decoration: none;
     list-style-type: none;
     padding: 10px 30px;
