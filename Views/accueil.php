@@ -10,7 +10,7 @@
           <div class='grid-item'>
             <img src='{$image->chemin}'>
               <div class='desc'>
-                <h4>{$image->titre}</h4>
+                  <h4>{$image->titre}</h4>
               </div>
           </div>"
             ?>
@@ -25,3 +25,4 @@
         });
     </script>
 </div>
+
