@@ -32,6 +32,7 @@ class UserController
         if ($this->usermodel->login($pseudo, $password)) {
             header('location: index.php?action=accueil');
         } else {
+
             header('location: index.php?action=getsignuppage');
             echo "Le mot de passe ou le pseudo n'est pas valide, essayez encore...";
         }
