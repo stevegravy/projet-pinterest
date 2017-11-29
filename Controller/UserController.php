@@ -54,12 +54,12 @@ class UserController
 
     public function SignUpUser($pseudo, $password)
     {
-        $longueur = strlen($password);
+       /* $longueur = strlen($password);
         $uppercase = preg_match('@[A-Z]@', $password);
         $lowercase = preg_match('@[a-z]@', $password);
         $number = preg_match('@[0-9]@', $password);
         if (!$uppercase || !$lowercase || !$number || $longueur < 8) {
-            echo "Le mot de passe doit contenir au moins 8 caractères avec une majuscule, une minuscule et un chiffre";
+            echo "Le mot de passe doit contenir au moins 8 caractères avec une majuscule, une minuscule et un chiffre";*/
         } else {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             echo($hashed_password);
