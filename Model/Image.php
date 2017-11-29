@@ -12,7 +12,7 @@ class Image
 
     public function insert($image)
     {
-        $req = $this->db->prepare("insert into image (chemin,titre,description,user_id) values (?,?,?,?)");
+        $req = $this->db->prepare("insert into public.image (chemin,titre,description,user_id) values (?,?,?,?)");
         $success = $req->execute([$image->chemin, $image->title, $image->description, $_SESSION['id']]);
 
         if ($success) {
@@ -24,7 +24,7 @@ class Image
 
     public function update($image)
     {
-        $req = $this->db->prepare("update image set titre = (?),description = (?) where id=(?)");
+        $req = $this->db->prepare("update public.image set titre = (?),description = (?) where id=(?)");
         $req->execute([$image->title, $image->description, $image->id]);
 
         if ($req->rowCount()) {
@@ -36,13 +36,13 @@ class Image
 
     public function delete($deleteId)
     {
-        $req = $this->db->prepare("delete from image where id=(?)");
+        $req = $this->db->prepare("delete from public.image where id=(?)");
         $req->execute([$deleteId]);
     }
 
     public function byId($image)
     {
-        $req = $this->db->prepare("select * from  image where id=(?)");
+        $req = $this->db->prepare("select * from  public.image where id=(?)");
         $req->execute([$image->id]);
         $imageObject = $req->fetchObject();
         return $imageObject;
@@ -50,7 +50,7 @@ class Image
 
     public function all()
     {
-        $req = $this->db->query("select * from  image");
+        $req = $this->db->query("select * from  public.image");
         $imagesArray = $req->fetchAll(PDO::FETCH_OBJ);
         return $imagesArray;
     }

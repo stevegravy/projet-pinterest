@@ -12,12 +12,12 @@ class User
 
     public function signUp($pseudo, $password)
     {
-        $req = $this->db->prepare("SELECT * FROM user where pseudo = (?)");//prépare la requete sql à exécuter stockée dans la variable $req
+        $req = $this->db->prepare("SELECT * FROM public.user where pseudo = (?)");//prépare la requete sql à exécuter stockée dans la variable $req
         $req->execute([$pseudo]);//exécute la requete sql préparée et compare le pseudo rentré avec celui stocké dans la BDD
         if ($req->rowCount() == 1) {//si le nombre de ligne affectée(s) par le dernier appel à le fonction "execute" = 1 (si le pseudo est déjà stocké dans la bdd)
             return false;//la fonction retourne "false"
         }
-        $req = $this->db->prepare("INSERT INTO user (pseudo,password) VALUES (?,?)"); //
+        $req = $this->db->prepare("INSERT INTO public.user (pseudo,password) VALUES (?,?)"); //
         $req->execute([$pseudo, $password]);
         return true;
     }
@@ -25,18 +25,19 @@ class User
 
     public function login($pseudo, $password)
     {
-        $req = $this->db->prepare("SELECT * FROM user where pseudo = (?) && password = (?)");
-        $req->execute([$pseudo, $password]);
+        $req = $this->db->prepare("SELECT * FROM public.user where pseudo = (?)");
+        $req->execute([$pseudo]);
         $user_data = $req->fetch();
-        if ($req->rowCount() == 1) {
-            $_SESSION ['login'] = true;
-            $_SESSION ['id'] = $user_data['id'];
-            $_SESSION ['pseudo'] = $user_data['pseudo'];
-            $_SESSION ['password'] = $user_data['password'];
-            $_SESSION ['role'] = $user_data['role'];
-            return true;
-        } else {
-            return false;
+        if (password_verify($password, $user_data['password'])) {
+            if ($req->rowCount() == 1) {
+                $_SESSION ['login'] = true;
+                $_SESSION ['id'] = $user_data['id'];
+                $_SESSION ['pseudo'] = $user_data['pseudo'];
+                $_SESSION ['role'] = $user_data['role'];
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }

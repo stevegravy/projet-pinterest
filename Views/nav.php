@@ -18,7 +18,8 @@
 
     <?php if(isset($_SESSION['login'])): ?>
     <div id="right_content">
-        <a href="index.php?action=form" id="add" ><img src="./Views/Assets/img/add.png" alt=""></a>
+        <a href="index.php?action=form" id="add" ><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i>
+        </a>
         <ul id="menu">
             <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
                 <a href="index.php?action=admin"><li class="link"><?= $_SESSION['pseudo'] ?></li></a>

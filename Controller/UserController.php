@@ -28,21 +28,12 @@ class UserController
 
     public function LoginUser($pseudo, $password)
     {
-        $longueur = strlen($password);
-        $uppercase = preg_match('@[A-Z]@', $password);
-        $lowercase = preg_match('@[a-z]@', $password);
-        $number = preg_match('@[0-9]@', $password);
-        if (!$uppercase || !$lowercase || !$number || $longueur < 8) {
-            echo "Le mot de passe doit contenir au moins 8 caractères avec une majuscule, une minuscule et un chiffre";
+
+        if ($this->usermodel->login($pseudo, $password)) {
+            header('location: index.php?action=accueil');
         } else {
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            echo($hashed_password);
-            if ($this->usermodel->login($pseudo, $hashed_password)) {
-                header('location: index.php?action=accueil');
-            } else {
-                header('location: index.php?action=getsignuppage');
-                echo "Le mot de passe ou le pseudo n'est pas valide, essayez encore...";
-            }
+            header('location: index.php?action=getsignuppage');
+            echo "Le mot de passe ou le pseudo n'est pas valide, essayez encore...";
         }
     }
 
@@ -54,7 +45,7 @@ class UserController
 
     public function SignUpUser($pseudo, $password)
     {
-        $longueur = strlen($password);
+        /*$longueur = strlen($password);
         $uppercase = preg_match('@[A-Z]@', $password);
         $lowercase = preg_match('@[a-z]@', $password);
         $number = preg_match('@[0-9]@', $password);
@@ -62,14 +53,19 @@ class UserController
             echo "Le mot de passe doit contenir au moins 8 caractères avec une majuscule, une minuscule et un chiffre";
         } else {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            echo($hashed_password);
             if ($this->usermodel->Signup($pseudo, $hashed_password)) {
-                header('location: index.php?action=login');
+                header('location: index.php?action=accueil');
             } else {
                 $_SESSION ['erreur'] = "Le mot de passe ou le pseudo n'est pas valide, essayez encore...";
-
                 header('location: index.php?action=signup');
             }
+        }*/
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        if ($this->usermodel->Signup($pseudo, $hashed_password)) {
+            header('location: index.php?action=accueil');
+        } else {
+            $_SESSION ['erreur'] = "Le mot de passe ou le pseudo n'est pas valide, essayez encore...";
+            header('location: index.php?action=signup');
         }
     }
 }
