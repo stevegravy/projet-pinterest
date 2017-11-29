@@ -461,3 +461,7 @@ img {
     width: 100%;
     border-radius: 5px;
 }
+
+#baguetteBox-overlay .full-image figcaption{
+    padding: 40px;
+}

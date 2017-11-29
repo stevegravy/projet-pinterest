@@ -7,12 +7,12 @@
         <div class='grid'>
             <?php foreach ($images as $image)
                 echo "
-          <div class='grid-item'>
-            <img src='{$image->chemin}'>
+          <a class='grid-item' class='image-popup-vertical-fit' href='{$image->chemin}' data-caption='{$image->description}' title='Caption. Can be aligned to any side and contain any HTML'>
+            <img src='{$image->chemin}' alt='{$image->titre}'>
               <div class='desc'>
                   <h4>{$image->titre}</h4>
               </div>
-          </div>"
+          </a>"
             ?>
         </div>
     </div>

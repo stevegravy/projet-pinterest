@@ -58,4 +58,6 @@ acc_cont.addEventListener("click",function(event){
     menu.classList.remove("visible");
     }
   });
+
+
 }
