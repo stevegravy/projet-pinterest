@@ -69,6 +69,7 @@ class ImageController
         header("location:index.php?action=accueil");
         return true;
     }
+    
 
 
     public function editImage()
