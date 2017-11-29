@@ -16,13 +16,15 @@
             ?>
         </div>
     </div>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script>
+</div>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         var elem = document.querySelector('.grid');
         console.log(elem);
         var msnry = new Masonry(elem, {
             itemSelector: '.grid-item',
         });
-    </script>
-</div>
+    });
+</script>
 

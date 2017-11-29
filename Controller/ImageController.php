@@ -47,9 +47,6 @@ class ImageController
             $errors = array();
             $file_tmp = $_FILES['image']['tmp_name'];
             $file_ext = strtolower(end(explode('.', $_FILES['image']['name'])));
-            /* $file_name = $_FILES['image']['name'];
-             $file_type = $_FILES['image']['type'];
-             $file_size = $_FILES['image']['size'];*/
 
             $fileExtension = array("jpeg", "jpg", "png", "webp", "gif");
 
