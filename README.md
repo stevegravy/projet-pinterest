@@ -12,7 +12,8 @@
 ## Choix de la charte graphique:
 * Polices: Roboto (roloto) et Lobster (Hipster).
 * Couleur dominante:
- ![Couleur dominante](./Views/Assets/img/screenshot.png)
+
+![Couleur dominante](./Views/Assets/img/screenshot.png)
 
 ## Répartition des tâches:
 * réalisation collecive:
@@ -52,7 +53,8 @@
     * atenter une lightbox en JS avant que tout ne bascule dans l'horreur du plugin
     * a fait le menu burger
     * les intégrattions en JS
-    * Sécurité agebt JS 007
+    * Sécurité agent JS 007
+    * Au final a fait toutes les pages en Frontend ! ( ou presque )
     
 * Steve, le tonton, expert en sécurité:
     * Hachage des password
@@ -64,6 +66,13 @@
     * générateur de blagues salaces mais rigolotes
     * relieur de page à temps plein
 
-    
+### TADADADADADA Déroulement du Projet:
+Dans l'ensemble, bilan plutôt positif, nous avons concrétiser nos actions.
+Nous avons tous appris les uns des autres.
+Et l'un dans l'autre, ce fût très agréable.
+* > » "On a tout niqué!" (© Kévin)
+* > » "Le meilleur moment, c'est le compliment" (© Steve)
+* > »"Moi, je ne sais pas, vous ne me manquerez pas" (© Thomas)
+* > »".............." (© Mehdi) Ah, tiens, il est déjà reparti...
     
     
