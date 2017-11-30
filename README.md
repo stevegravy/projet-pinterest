@@ -1,19 +1,19 @@
 # Projet-pinterest
 
-##Equipe de projet:
+## Equipe de projet:
 * Kévin Somao: Frontend
 * Thomas Point: Frontend
 * Mehdi Trabelsi: Backend
 * Steve Gravy: Backend
 
-####Lien vers le repo des [consignes](https://github.com/becodeorg/Lovelace-promo-2/tree/master/Projects/projet-pinterest)
-####Lien vers l'app sur [Heroku](https://pinterestbc.herokuapp.com/index.php?action=default)
+#### Lien vers le repo des [consignes](https://github.com/becodeorg/Lovelace-promo-2/tree/master/Projects/projet-pinterest)
+#### Lien vers l'app sur [Heroku](https://pinterestbc.herokuapp.com/index.php?action=default)
 
-##Choix de la charte graphique:
+## Choix de la charte graphique:
 * Polices: Roboto (roloto) et Lobster (Hipster).
 * Couleur dominante: ![Couleur dominante](https://www.hostingpics.net/viewer.php?id=526204Screenshotfrom20171130100923.png)
 
-##Répartition des tâches:
+## Répartition des tâches:
 * réalisation collecive:
     * scrum journalier
     * maintient d'une énergie positive et constructive. C'est un effort de chaque instant.
