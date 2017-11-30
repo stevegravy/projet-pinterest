@@ -9,7 +9,7 @@ if (!isset($_SESSION) || $_SESSION['role'] != 1) {
         <form class="Login" id="editForm" action="index.php?action=editImage" method="post">
             <h1>Edit Image</h1>
             <input placeholder="title" type="text" value="<?= isset($_POST['titre']) ? $_POST['titre'] : "" ?>" name="titre">
-            <textarea placeholder="Description"><?= isset($_POST['description']) ? $_POST['description'] : "" ?></textarea>
+            <textarea name="description" placeholder="description"><?= isset($_POST['description']) ? $_POST['description'] : "" ?></textarea>
             <input type="hidden" value="<?= isset($_POST['id']) ? $_POST['id'] : "" ?>" name="id">
             <div>
                 <input type="submit" value="save changes">
