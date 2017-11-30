@@ -51,12 +51,11 @@ class ImageController
 
 
             if (in_array($file_ext, $fileExtension) === false) {
-                $errors[] = "extension not allowed, please choose a JPEG or PNG file.";
                 header("location:index.php?action=form");
             }
             if (empty($errors) == true) {
                 $boolUpload = move_uploaded_file($file_tmp, "public/images/" . $title . "." . $file_ext);
-                if ($boolUpload) {
+                if (!$boolUpload) {
                     $_SESSION['errorsImg'] = 2;
                     header("location:index.php?action=form");
                 }
