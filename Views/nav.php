@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Pinterest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Views/Assets/img/logo.ico" type="image/x-icon"/>
-    <!---<meta property="og:image" content="./Views/Assets/img/logo.ico" />--->
     <link rel="stylesheet" href="Views/Assets/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.1/baguetteBox.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">

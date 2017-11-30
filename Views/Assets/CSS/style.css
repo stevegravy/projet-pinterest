@@ -24,7 +24,7 @@ body {
     padding-bottom: 30px;
     font-size: 200%;
     left: calc(50% - 200px);
-    z-index: 5;
+    z-index: 20;
 }
 
 .form_ctn .erreur {
@@ -103,7 +103,7 @@ body {
     background: #F2F2F2;
     box-sizing: border-box;
     border-radius: 5px;
-    color: #FF6969;
+    color: grey;
 }
 
 .degrade input[type="text"], [type="password"] {
@@ -123,7 +123,7 @@ textarea {
     margin-top: 25px;
     box-sizing: border-box;
     border-radius: 5px;
-    color: #FF6969;
+    color: grey;
     height: 150px;
     resize: none;
 }
@@ -140,8 +140,14 @@ textarea {
     margin: 30px auto 0;
 }
 
+#err{
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+}
+
 #textForm::placeholder,#description::placeholder{
-  color: #FF6969;
+  color: rgba(128, 128, 128, 0.43);
 }
 
 .Login input[type="file"] {
@@ -274,7 +280,7 @@ textarea {
     width: 60%;
     max-width: 700px;
     text-align: left;
-    margin: 200px auto;
+    margin: 50px auto;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 20px 60px rgba(0, 0, 99, 0.26);
@@ -322,6 +328,19 @@ textarea {
 
 #acc_cont {
     padding: 0 50px;
+}
+
+#uploadForm{
+    color: grey;
+}
+
+
+#uploadForm input[type="text"]{
+    color: grey;
+}
+
+#uploadForm textarea{
+    color: grey;
 }
 
 #searchForm {

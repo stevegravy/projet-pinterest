@@ -6,7 +6,6 @@
         <h2>Sign up</h2>
         <input id="userLogin" type="text" name="pseudo" placeholder="user">
         <input id="passwordLogin" type="password" name="password" placeholder="password" >
-        <input id="confirmation" type="password" name="confirmation" placeholder="confirmation password">
         <input id="buttonLogin" type="submit" name="Sign up" value="Sign up">
     </div>
 </form>
