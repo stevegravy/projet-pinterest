@@ -11,7 +11,8 @@
 
 ## Choix de la charte graphique:
 * Polices: Roboto (roloto) et Lobster (Hipster).
-* Couleur dominante: ![Couleur dominante](./Views/Assets/img/screenshot.png)
+* Couleur dominante:
+ ![Couleur dominante](./Views/Assets/img/screenshot.png)
 
 ## Répartition des tâches:
 * réalisation collecive:
