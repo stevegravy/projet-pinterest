@@ -4,7 +4,7 @@ require_once 'bootstrap.php';
 $usercontroller = new UserController;
 $imagecontroller = new ImageController;
 
-$action = isset($_GET['action']) ? htmlentities($_GET['action']) : 'default';
+$action = isset($_GET['action']) ? htmlentities($_GET['action']) : '';
 ?>
 
 <?php
