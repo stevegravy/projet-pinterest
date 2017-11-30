@@ -49,16 +49,18 @@ class ImageController
             $file_ext = strtolower(end(explode('.', $_FILES['image']['name'])));
             $fileExtension = array("jpeg", "jpg", "png", "webp", "gif");
 
-
+            if ($_FILES["file"]["size"] > 200000) {
+                $_SESSION['errorsImg'] = 2;
+                header("location:index.php?action=form");
+            }
             if (in_array($file_ext, $fileExtension) === false) {
+                $_SESSION['errorsImg'] = 3;
+                $errors[] = "extension not allowed, please choose a JPEG or PNG file.";
                 header("location:index.php?action=form");
             }
             if (empty($errors) == true) {
                 $boolUpload = move_uploaded_file($file_tmp, "public/images/" . $title . "." . $file_ext);
-                if (!$boolUpload) {
-                    $_SESSION['errorsImg'] = 2;
-                    header("location:index.php?action=form");
-                }
+
                 $imagePath = "public/images/" . $title . "." . $file_ext;
                 $image = $this->dataToObject([$title, $description, $imagePath]);
                 $this->ImageModel->insert($image);
