@@ -13,10 +13,10 @@
 * Polices: Roboto (roloto) et Lobster (Hipster).
 * Couleur dominante:
 
-![Couleur dominante](./Views/Assets/img/screenshot.png)
+![Couleur dominante de la charte graphique](./Views/Assets/img/screenshot.png)
 
 ## L'application:
-#### Programmes utilisés:
+#### Langages utilisés:
 * JavaScript pour le Front-End
 * HTML/CSS pour le Front-End
 * PHP pour le Back-End
@@ -27,7 +27,7 @@
 * Masonry pour le positionnement des photos sur l'acceuil.
 * BaguetteBox pour les lightbox sur les images.
 
-#### Fonctionnalitées:
+#### Fonctionnalités:
 Pin-it est un programme de base servant à poster des photos qui seront hébergées sur une base de données. Les photos peuvent être vues par n'importe quel utilisateur, même par des personnes n'ayant pas de compte. En revanche pour poster une photo il est nécessaire d'avoir un compte pour accéder au formulaire d'upload d'image. Il y a aussi une page admin permettant de supprimer les photos ou bien même de modifier les commentaires ou les titres d'une photo.
 
 #### A améliorer:
@@ -49,12 +49,12 @@ Masonry ne réagit pas toujours après un raffraichissement de page.
     
         
 * Mehdi, le membre fantome:
-    * Rédaction du README.TXT
+    * Rédaction du README.md
     * Tatage de Heroku
     * Perte du soldat Mehdi :"Petit oiseau parti trop tôt..."
-    * A déplacé les postIt du local Lovelace jusqu à l'open space afin d'écrire le README.TXT
+    * A déplacé les postIt du local Lovelace jusqu à l'open space afin d'écrire le README.md
     * Merci également pour les cafés le premier jour
-    * A la base de données ainsi que les tables sur PHPmyadmin
+    * A construit la base de données ainsi que les tables en local sur PHPmyadmin
     
 * Kévin, l'insomniaque:
     * Vieux père de l'équipe, grand marabou du PHP, jongleur de l'extrème entre le frontend et le backend.
@@ -74,24 +74,23 @@ Masonry ne réagit pas toujours après un raffraichissement de page.
     * a donné son avis d'expert sur la maquette
     * a mis en page "l'accueil"
     * et également la nav barre
-    * page sign up
-    * a révisé le fichier login que Bertrand voulait un popup et qui a posé moult problèmes
+    * mais aussi la page sign up
+    * a révisé le fichier login que Bertrand voulait en popup et qui a posé moult problèmes
     * Réalisation de la page Admin
     * a tenter une lightbox en JS avant que tout ne bascule dans l'horreur du plugin
-    * a fait le menu burger
-    * les intégrattions en JS
+    * a fait le menu burger,
+    * les intégrattions en JS,
     * Sécurité agent JS 007
     * Au final a fait toutes les pages en Frontend ! ( ou presque )
     
 * Steve, le tonton, expert en sécurité:
     * Hachage des password
-    * a structuré le "Rejex" pour les password
-    * structure du model admin
-    * Le ControlerUser.php
-    * Le routeur qui a permis après un bref passage à vide de ressoudre l'équipe sans la perte d'un autre membre
-    * Le modeluser avec un ironfist doublé d'un doomfist (Margreth Tatcher serait très fière)
+    * a structuré les "REGEX" pour sécuriser les password
+    * structure du "ModelUser.php"
+    * structure du routeur MVC dans index.php qui a permis après un bref passage à vide de ressouder l'équipe sans la perte d'un    autre membre
+    * structure du UserController.php
     * générateur de blagues salaces mais rigolotes
-    * relieur de page à temps plein
+    * relieur de pages à temps plein
 
 ### TADADADADADA Déroulement du Projet:
 Dans l'ensemble, bilan plutôt positif, nous avons concrétisé nos actions.
