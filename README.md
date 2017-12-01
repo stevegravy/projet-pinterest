@@ -1,6 +1,6 @@
-# Projet-pinterest
+# Projet-pinterest (Exercice)
 
-## Equipe de projet:
+## Equipe de projet (Juniors Developpers):
 * Kévin Somao: Frontend
 * Thomas Point: Frontend
 * Mehdi Trabelsi: Backend
@@ -14,6 +14,27 @@
 * Couleur dominante:
 
 ![Couleur dominante](./Views/Assets/img/screenshot.png)
+
+## L'application:
+#### Programmes utilisés:
+* JavaScript pour le Front-End
+* HTML/CSS pour le Front-End
+* PHP pour le Back-End
+* PostgreSQL pour la base de données
+* Herbegé sur Heroku
+
+###### Plug-in:
+* Masonry pour le positionnement des photos sur l'acceuil.
+* BaguetteBox pour les lightbox sur les images.
+
+#### Fonctionnalitées:
+Pin-it est un programme de base servant à poster des photos qui seront hébergé sur une base de données. Les photos peuvent être vues par n'importe qu'elle utilisateur, même par des personnes n'ayant pas de compte. En revanche pour poster une photo il est nécessaire d'avoir un compte pour accéder au formulaire d'upload d'image. Il y a aussi une page admin permettant de supprimer les photos ou bien même de modifier les commentaires ou les titres d'une photo.
+
+#### A améliorer:
+* Le développer en Progressive Web App.
+* Ajouter un système ou l'utilisateur peut voir les images qu'il a postées et les modifier.
+* Ajouter un refresh automatique grâce à de l'Ajax.
+* Ajouter un système de pagination.
 
 ## Répartition des tâches:
 * réalisation collecive:
