@@ -28,13 +28,19 @@
 * BaguetteBox pour les lightbox sur les images.
 
 #### Fonctionnalitées:
-Pin-it est un programme de base servant à poster des photos qui seront hébergé sur une base de données. Les photos peuvent être vues par n'importe qu'elle utilisateur, même par des personnes n'ayant pas de compte. En revanche pour poster une photo il est nécessaire d'avoir un compte pour accéder au formulaire d'upload d'image. Il y a aussi une page admin permettant de supprimer les photos ou bien même de modifier les commentaires ou les titres d'une photo.
+Pin-it est un programme de base servant à poster des photos qui seront hébergées sur une base de données. Les photos peuvent être vues par n'importe quel utilisateur, même par des personnes n'ayant pas de compte. En revanche pour poster une photo il est nécessaire d'avoir un compte pour accéder au formulaire d'upload d'image. Il y a aussi une page admin permettant de supprimer les photos ou bien même de modifier les commentaires ou les titres d'une photo.
 
 #### A améliorer:
 * Le développer en Progressive Web App.
 * Ajouter un système ou l'utilisateur peut voir les images qu'il a postées et les modifier.
 * Ajouter un refresh automatique grâce à de l'Ajax.
 * Ajouter un système de pagination.
+* Ajouter un système de recherche via des tags.
+
+#### Problèmes techniques:
+Difficile de manipuler Heroku et le PostgreSQL, on ne peux pas réellement voir ce qu'on fait avec les tables.
+Perte d'un membre donc réorganisation a 3 au lieu de 4. 
+Masonry ne réagit pas toujours après un raffraichissement de page. 
 
 ## Répartition des tâches:
 * réalisation collecive:
@@ -51,7 +57,7 @@ Pin-it est un programme de base servant à poster des photos qui seront héberg�
     * A la base de données ainsi que les tables sur PHPmyadmin
     
 * Kévin, l'insomniaque:
-    * Vieux père de l'équipe, grand marabou du PHP, jongleur de l'extreme entre le frontend et le backend.
+    * Vieux père de l'équipe, grand marabou du PHP, jongleur de l'extrème entre le frontend et le backend.
     * Réalisation de la maquette du projet sur Figma
     * ControleImage.php en backend
     * Modelimage.php
@@ -71,7 +77,7 @@ Pin-it est un programme de base servant à poster des photos qui seront héberg�
     * page sign up
     * a révisé le fichier login que Bertrand voulait un popup et qui a posé moult problèmes
     * Réalisation de la page Admin
-    * atenter une lightbox en JS avant que tout ne bascule dans l'horreur du plugin
+    * a tenter une lightbox en JS avant que tout ne bascule dans l'horreur du plugin
     * a fait le menu burger
     * les intégrattions en JS
     * Sécurité agent JS 007
@@ -82,13 +88,13 @@ Pin-it est un programme de base servant à poster des photos qui seront héberg�
     * a structuré le "Rejex" pour les password
     * structure du model admin
     * Le ControlerUser.php
-    * Le routeur qui a permis après un bref passage à vide de ressouder l'équipe sans la perte d'un autre membre
+    * Le routeur qui a permis après un bref passage à vide de ressoudre l'équipe sans la perte d'un autre membre
     * Le modeluser avec un ironfist doublé d'un doomfist (Margreth Tatcher serait très fière)
     * générateur de blagues salaces mais rigolotes
     * relieur de page à temps plein
 
 ### TADADADADADA Déroulement du Projet:
-Dans l'ensemble, bilan plutôt positif, nous avons concrétiser nos actions.
+Dans l'ensemble, bilan plutôt positif, nous avons concrétisé nos actions.
 Nous avons tous appris les uns des autres.
 Et l'un dans l'autre, ce fût très agréable.
 * > » "On a tout niqué!" (© Kévin)
